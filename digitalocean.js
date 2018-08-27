@@ -33,4 +33,17 @@ function getDOComponent(){
 
     return result
 }
-getDOComponent()
+// getDOComponent()
+
+function getIncident(){
+    let url = axios.get('https://s2k7tnzlhrpw.statuspage.io/api/v1/incidents.json')
+                .then((result)=>{
+                    let res = result.data;
+                    console.log(res)
+                })
+                .catch((err)=>{
+                    console.log(err)
+                })
+    return url
+}   
+getIncident()
